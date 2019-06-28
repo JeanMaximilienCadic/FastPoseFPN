@@ -6,13 +6,8 @@ Estimation using Pose Residual Network", ECCV 2018. https://arxiv.org/pdf/1807.0
 
 The network include four parts: backbone, keypoint regression subnet, person detection part and prn part for multi-person pose assignment.
 
-The architecture of the network:
+![avatar](img/img.png)
 
-![avatar](http://wx1.sinaimg.cn/mw690/005uXRWzly1fua75w1y62j30ul08vwk2.jpg)
-
-The architecture of the keypoint subnet:
-
-![avatar](http://wx4.sinaimg.cn/mw690/005uXRWzly1fua75sh9xaj30ub072755.jpg)
 
 ## Improvements
 - (Speed) Caching on hdd 
