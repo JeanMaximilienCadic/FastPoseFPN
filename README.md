@@ -20,6 +20,12 @@ The architecture of the keypoint subnet:
 
 ![avatar](http://wx4.sinaimg.cn/mw690/005uXRWzly1fua75sh9xaj30ub072755.jpg)
 
+## Improvements
+- (Speed) Caching on hdd 
+- (Speed) Multi-gpu
+- (Programming) Training easy to customize
+- (Programming) Code formatting following the IYO patterns
+
 ## Datasets
 
 MSCOCO2017:
@@ -29,34 +35,33 @@ The keypoint subnet and retinanet need MSCOCO2017.You should download the data f
 ## Requirements
 
 - python3
-- pytorch == 0.4.0
+- pytorch == 1.0.1
 - pycocotools
 - numpy
 - tqdm
 - progress
 - scikit-image
 
+
 ## Train
 The backbone and two fpn-based model has been realized in this repo. The keypoint subnet is defined in posenet.py , the person detection network is defined in retinanet.py. You can train them to get keypoint heatmap and person detection bbox.  
 
-If you want to train the posenet (keypoint subnet) for keypoint estimation, just(and if you want to train retinanet with coco, just modify the dataloader.py to get bounding box annotations):
+(MULTI-GPU recommended )If you want to train the posenet (keypoint subnet) for keypoint estimation with batch size 100 on 4 gpus:
 ```
-python train_posenet.py
-```
-
-This PRN model has been set in prn_train direcory. MSCOCO dataset's annotations contain person bbox and coordinate of keypoints. You can just train the PRN network by 
-```
-python prn_train/train.py
+python fpn_pose/__init__.py --batch_size 100 --devices 0,1,2,3
 ```
 
-The options of training settings in prn_train/opt.py.
+(SINGLE GPU )If you want to train the posenet (keypoint subnet) for keypoint estimation with batch size 8 on 1 gpu:
+```
+python fpn_pose/__init__.py --batch_size 8 --devices 0
+```
 
-Thanks for the [repo](https://github.com/salihkaragoz/pose-residual-network-pytorch). We have realized and contribute few code of the independent PRN module based to this repo. Most code of PRN module are from this repo. I fixed some bugs when run the code from the authors' code.
- 
+This version support multi-gpu 
 ## Acknowledgement
 
-Thanks for the author of "MultiPoseNet: Fast Multi-Person Pose
-Estimation using Pose Residual Network".
+Thanks for the author of "MultiPoseNet: Fast Multi-Person Pose Estimation using Pose Residual Network".
+Thanks for the author of the following repository https://github.com/IcewineChen/pytorch-MultiPoseNet that I reused as a starting point.
+
 
 
 
