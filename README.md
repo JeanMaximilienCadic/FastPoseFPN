@@ -1,14 +1,8 @@
 ﻿# MultiPoseNet
 
 This repo is a pytorch reproduce-version for paper "MultiPoseNet: Fast Multi-Person Pose
-Estimation using Pose Residual Network", ECCV 2018.
+Estimation using Pose Residual Network", ECCV 2018. https://arxiv.org/pdf/1807.04067.pdf
 
-The paper link is here multiposenet-paper: (https://arxiv.org/pdf/1807.04067.pdf). Now multiposenet has archived the state-of-the-art of multi-person pose estimation in bottom-up methods.
-
-Now network has been defined and test with CUDA 8 and ubuntu 16.04(include keypoint subnet,retinanet and pose residual network).
-
-
-## Network Architecture
 
 The network include four parts: backbone, keypoint regression subnet, person detection part and prn part for multi-person pose assignment.
 
