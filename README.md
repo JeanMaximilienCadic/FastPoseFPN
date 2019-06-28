@@ -1,4 +1,4 @@
-﻿# MultiPoseNet
+﻿# FastMultiPoseNet
 
 This repo is a pytorch reproduce-version for paper "MultiPoseNet: Fast Multi-Person Pose
 Estimation using Pose Residual Network", ECCV 2018. https://arxiv.org/pdf/1807.04067.pdf
