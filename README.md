@@ -52,7 +52,7 @@ Thanks for the author of "MultiPoseNet: Fast Multi-Person Pose Estimation using 
 Thanks for the author of the following repository https://github.com/IcewineChen/pytorch-MultiPoseNet that I reused as a starting point.
 
 
- Email me at contact@9dw-lab.com for any questions.
+For any question please contact me at j.cadic@protonmail.ch
 
 
 
